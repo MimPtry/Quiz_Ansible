@@ -1,1 +1,3 @@
-# Quiz_Ansible
+# Quiz_Ansible : wordpress
+
+# ansible-playbook quiz.yml
