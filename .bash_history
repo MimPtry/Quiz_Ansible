@@ -100,3 +100,85 @@ vi README.md
 git add .
 git commit -m "commit ansible.cfg inventory quiz.yml(set mysql next time)"
 git push
+ls
+cd ansible/
+vi quiz.yml 
+ansible-playbook --syntax-check quiz.yml 
+vi quiz.yml 
+vi sqlscript.sh
+vi quiz.yml 
+ansible-playbook --syntax-check quiz.yml 
+vi quiz.yml 
+ansible-playbook --syntax-check quiz.yml 
+ansible-playbook quiz.yml 
+python -v
+ls
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook --syntax-check quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+cd
+clear
+git add .
+git commit -t "error to run script file"
+docker push 
+git push
+git add .
+git commit -m "error to run script file"
+git push
+vi quiz.yml 
+cd ansible/
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+vi quiz.yml 
+ansible-playbook quiz.yml 
+fatal: [192.168.202.135]: FAILED! => {"changed": false, "msg": "unable to connect to database: (1045, u\"Access denied for user 'root'@'localhost' (using password: YES)\")"}
+clear
+ls
+ls -la
+vim quiz.y
+vi quiz.yml 
+ansible-playbook quiz.yml 
+ls
+cd
+git add .
+git commit -m 'Error Establishing a Database Connection'
+git push
+vi quiz.yml 
+cd ansible/
+vi quiz.yml 
+rm {changed\: 
+ls
+cd
+git add .
+git commit -m 'remove {changed\: file'
+git push
+git add .
+git commit -m 'remove {changed: file'
+git commit -m 'remove unuse file'
+git push
+shutdown now
