@@ -39,6 +39,31 @@
              state: enabled
              permanent: yes
              immediate: yes 
+     - name: install yum install python2-PyMySQL
+       yum:
+           name: python2-PyMySQL
+
+     - name: set mysqladmin password
+       mysql_user:
+             name: mysqladmin
+             password: abc
+             state: present
+
+#     - name: sent script file to server
+#       copy:
+#           src: /home/centos/ansible/sqlscript.sh
+#           dest: sqlscript.sh
+
+     - name: run command
+       shell: |
+           echo "DELETE FROM mysql.user WHERE User='';" | mysql -uroot -p"abc"  
+           echo "DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');" | mysql -uroot -p"abc"  
+           echo "DROP DATABASE test;" | mysql -uroot -p"abc"  
+           echo "DELETE FROM mysql.db WHERE Db='test' OR Db='test\_%';" | mysql -uroot -p"abc"  
+           echo "FLUSH PRIVILEGES;" | mysql -uroot -p"abc"  
+           echo "CREATE DATABASE wordpress" | mysql -uroot -p"abc"  
+           echo "GRANT ALL PRIVILEGES on wordpress.* to 'ansible'@'localhost' identified by 'mypassword';" | mysql -uroot -p"abc"  
+           echo "FLUSH PRIVILEGES;" | mysql -uroot -p"abc" 
 
      - name: download wordpress
        get_url:
