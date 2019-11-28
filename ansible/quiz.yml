@@ -97,8 +97,8 @@
             regexp: "{{ item.regexp }}"
             line: "{{ item.line }}"
        loop:
-            - {regexp: "^define('DB_NAME'", line: "define('DB_NAME', 'wordpress');" } 
-            - {regexp: "^define('DB_USER'", line: "define('DB_USER', 'root');" } 
-            - {regexp: "^define('DB_PASSWORD'", line: "define('DB_PASSWORD', 'abc');" } 
-            - {regexp: "^define('DB_HOST'", line: "define('DB_HOST', 'localhost');" } 
+            - { regexp: ^define\('DB_NAME', line: "define('DB_NAME', 'wordpress');" } 
+            - { regexp: ^define\('DB_USER', line: "define('DB_USER', 'root');" } 
+            - { regexp: ^define\('DB_PASSWORD', line: "define('DB_PASSWORD', 'abc');" } 
+            - { regexp: ^define\('DB_HOST', line: "define('DB_HOST', 'localhost');" } 
 ...
