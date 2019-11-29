@@ -45,10 +45,13 @@
 
      - name: set mysqladmin password
        mysql_user:
-             name: root 
-             password: abc
+             name: "{{ item.name }}"
+             password: "{{ item.password }}"
              state: present
        ignore_errors: yes
+       loop:
+            - { name: root, password: abc }
+            - { name: root, password: abc }
 
      - name: run command
        become_user: root
